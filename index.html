@@ -1,0 +1,116 @@
+<head>
+  <h1>PAJOC</h1>
+  
+</head>
+
+<body>
+  <div class="info">
+    <div id="jog1">
+      <p id="p1">PLAYER 1</p>
+      <p>PONTOS</p>
+      <p id="pontos1">0</p>
+    </div>
+    <div id="jog2">
+      <p id="p2">PLAYER 2</p>
+      <p>PONTOS</p>
+      <p id="pontos2">0</p>
+    </div>
+    <div id="cardBan1">
+      <p>CARTA BANIDA</p>
+      <p class="carta" id="ban1"></p>
+
+    </div>
+    <div id="cardBan2">
+      <p>CARTA BANIDA</p>
+      <p class="carta" id="ban2"></p>
+
+    </div>
+<div class="infoSorteio">
+  <div id="nomes">
+<input type="text" id="j1" placeholder="Jogador 1">
+  
+<input type="text" id="j2" placeholder="Jogador 2">
+<button id="btn" onclick="colocaNome()">OK</button>
+    </div>
+  
+  <p id ="rodada"> </p>
+  <p id="cartaSorteio1"> </p>
+  <p id="cartaSorteio2"> </p>
+  <p id="resultadoSorteio"> </p>
+  <p id="resultadoFinal"></p>
+  
+  
+  
+    </div>
+  </div>
+
+  <div class="mesa">
+    <div id="botoesPlayer1">
+
+      <button onclick="buttonClicked(this, 1)" id="1" class="num-button1">A</button>
+      <button onclick="buttonClicked(this, 1)" id="2" class="num-button1">2</button>
+      <button onclick="buttonClicked(this, 1)" id="3" class="num-button1">3</button>
+      <button onclick="buttonClicked(this, 1)" id="4" class="num-button1">4</button>
+      <button onclick="buttonClicked(this, 1)" id="5" class="num-button1">5</button>
+      <button onclick="buttonClicked(this, 1)" id="6" class="num-button1">6</button>
+      <button onclick="buttonClicked(this, 1)" id="7" class="num-button1">7</button>
+      <button onclick="buttonClicked(this, 1)" id="8" class="num-button1">8</button>
+      <button onclick="buttonClicked(this, 1)" id="9" class="num-button1">9</button>
+      <button onclick="buttonClicked(this, 1)" id="10" class="num-button1">10</button>
+      <button onclick="buttonClicked(this, 1)" id="11" class="num-button1">J</button>
+      <button onclick="buttonClicked(this, 1)" id="12" class="num-button1">Q</button>
+      <button onclick="buttonClicked(this, 1)" id="13" class="num-button1">K</button>
+    </div>
+
+    <div id="botoesPlayer2">
+
+      <button onclick="buttonClicked(this, 2)" id="100" class="num-button2">A</button>
+      <button onclick="buttonClicked(this, 2)" id="200" class="num-button2">2</button>
+      <button onclick="buttonClicked(this, 2)" id="300" class="num-button2">3</button>
+      <button onclick="buttonClicked(this, 2)" id="400" class="num-button2">4</button>
+      <button onclick="buttonClicked(this, 2)" id="500" class="num-button2">5</button>
+      <button onclick="buttonClicked(this, 2)" id="600" class="num-button2">6</button>
+      <button onclick="buttonClicked(this, 2)" id="700" class="num-button2">7</button>
+      <button onclick="buttonClicked(this, 2)" id="800" class="num-button2">8</button>
+      <button onclick="buttonClicked(this, 2)" id="900" class="num-button2">9</button>
+      <button onclick="buttonClicked(this, 2)" id="1000" class="num-button2">10</button>
+      <button onclick="buttonClicked(this, 2)" id="1100" class="num-button2">J</button>
+      <button onclick="buttonClicked(this, 2)" id="1200" class="num-button2">Q</button>
+      <button onclick="buttonClicked(this, 2)" id="1300" class="num-button2">K</button>
+    </div>
+    <div id="cartasDaRodada1">
+      <p id = "card1" class="carta"></p>
+      <p id = "card2"class="carta"></p>
+      <p class="carta" id = "card3"></p>
+      <p class="carta" id = "card4"></p>
+    </div>
+
+    <div id="cartasDaRodada2">
+      <p id = "card11" class="carta"></p>
+      <p id = "card22" class="carta"></p>
+      <p id = "card33" class="carta"></p>
+      <p id = "card44" class="carta"></p>
+    </div>
+    <div class="botoesMesa">
+      <button onclick="sorteio()" id="sorteio" >SORTEIO</button>
+      <button onclick="iniciar()" disabled id="start">INICIAR </button>
+      <button onclick="proximaRodada()" disabled id="nxtRound">PRÓXIMA RODADA</button>
+    </div>
+
+    <div class="botoesMesa2">
+      
+      <p> Segue lá </p>
+      
+         <a id="linkYT" href="https://www.youtube.com/channel/UCUxlXGqo-5slz2cCzSfI5bg" target="_blank">YOUTUBE</a>
+      <a  id="linkYT" href="https://twitch.tv/ganietv" target="_blank">TWITCH</a>
+      </div>
+    
+  </div>
+
+  <body>
+
+    <footer>
+      <p>Criado por Sao Ganie</p>
+      <p>Apoie em: <a href="https://livepix.gg/saoganie" target="_blank">livepix.gg/SaoGanie</a>
+      </p>
+    </footer>
