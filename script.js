@@ -200,16 +200,25 @@ function sorteio() {
 
   if (baralhoJog1[0] > baralhoJog2[0]) {
     document.getElementById("resultadoSorteio").innerHTML =
-      "O Jogador 1 começa";
+      document.getElementById("p1").innerHTML + " começa";
   } else {
     document.getElementById("resultadoSorteio").innerHTML =
-      "O Jogador 2 começa";
+      document.getElementById("p2").innerHTML + " começa";
   }
   document.getElementById("sorteio").disabled = true;
   document.getElementById("start").disabled = false;
 
   sorteio1 = baralhoJog1[0];
   sorteio2 = baralhoJog2[0];
+  
+  if(sorteio1>sorteio2){
+  vez=1;
+  
+};
+
+if (sorteio2>sorteio1){
+  vez=2;
+};
 
   baralhoJog1.shift();
   baralhoJog2.shift();
@@ -263,11 +272,7 @@ var sorteio2=0;
 
 
 
-if(sorteio1>sorteio2){
-  vez=1;
-}else {
-  vez=2
-};
+
 
 
 
@@ -276,33 +281,44 @@ if(sorteio1>sorteio2){
 function buttonClicked(button, player) {
   
   
-if(vez==1){
-  if (button.classList.contains("num-button1")){
-    alert("Não é sua vez!");
-    correspondingButton.disabled = false;
-    return;
-  } 
-}
-  
-  if(vez==2){
+  if(vez==1){
   if (button.classList.contains("num-button2")){
     alert("Não é sua vez!");
     correspondingButton.disabled = false;
-    return;
+    vez=1;
+    
   }
 }
+  
+  if(vez==2){
+  if (button.classList.contains("num-button1")){
+    alert("Não é sua vez!");
+    correspondingButton.disabled = false;
+    vez=2;
+    
+  }
+}
+  
   
   
   
   
   if (button.classList.contains("num-button1")) {
     contVez1++;
-    vez=1;
-    
-  } else {
-    contVez2++;
     vez=2;
+    
+  } 
+  
+  if(button.classList.contains("num-button2")) {
+    contVez2++;
+    vez=1;
   }
+  
+
+  
+  
+  
+  
   
   atualizarContVezGeral();
   
@@ -506,20 +522,20 @@ function proximaRodada() {
   if (contRodada == 11) {
     if (pontos1 > pontos2) {
       document.getElementById("resultadoFinal").innerHTML =
-        "O jogador 1 Ganhou";
+        document.getElementById("p1").innerHTML + " Ganhou!";
     }
     if (pontos2 > pontos1) {
       document.getElementById("resultadoFinal").innerHTML =
-        "O jogador 2 Ganhou";
+        document.getElementById("p2").innerHTML + " Ganhou!";
     }
 
     if (pontos1 == pontos2) {
       if (baralhoJog1[0] > baralhoJog2[0]) {
         document.getElementById("resultadoFinal").innerHTML =
-          "O jogador 1 Ganhou";
+          document.getElementById("p1").innerHTML + " Ganhou!";
       } else {
         document.getElementById("resultadoFinal").innerHTML =
-          "O jogador 2 Ganhou";
+          document.getElementById("p2").innerHTML + " Ganhou!";
       }
     }
   }
