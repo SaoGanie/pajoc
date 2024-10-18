@@ -173,6 +173,8 @@ var baralhoJog2 = [
   o_k
 ];
 
+var iniciarAtv=0;
+
 // A função embaralha os itens da lista
 function embaralhar(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -225,6 +227,8 @@ if (sorteio2>sorteio1){
 }
 
 function iniciar() {
+  
+  iniciarAtv=1;
   document.getElementById("cartaSorteio1").innerHTML = "";
 
   document.getElementById("cartaSorteio2").innerHTML = "";
@@ -280,6 +284,17 @@ var sorteio2=0;
 
 function buttonClicked(button, player) {
   
+  if(vez==0){
+    alert("Faça o sorteio.");
+    correspondingButton.disabled = false;
+    vez=0;
+  }
+  
+  if(iniciarAtv==0){
+    alert("Clique em INICIAR");
+    correspondingButton.disabled = false;
+    iniciar=0;
+  }
   
   if(vez==1){
   if (button.classList.contains("num-button2")){
@@ -480,6 +495,9 @@ function buttonClicked(button, player) {
 }
 
 function proximaRodada() {
+  
+ 
+  
   if (contVezGeral == 8) {
     let elements = document.querySelectorAll(".num-button1");
     elements.forEach((element) => {
@@ -513,8 +531,9 @@ function proximaRodada() {
   contVez1 = 0;
   contVez2 = 0;
   contVezGeral = 0;
+  iniciarAtv=0;
 
-  iniciar();
+  
 
   document.getElementById("start").disabled = false;
 
@@ -542,7 +561,7 @@ function proximaRodada() {
   if (contRodada == 11) {
     document.getElementById("rodada").innerHTML = "Fim de Jogo";
     document.getElementById("start").disabled = true;
-    
+    document.getElementById("newGame").disabled = false;
   }
 }
 
@@ -561,4 +580,8 @@ function colocaNome(){
    document.getElementById("p2").innerHTML= valor2;
   
  
+}
+
+function newGame() {
+  location.href = "https://saoganie.github.io/pajoc/";
 }
